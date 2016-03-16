@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright (c) 2016. David de Andrés and Juan Carlos Ruiz, DISCA - UPV, Development of apps for mobile devices.
+  -->
+
+<resources>
+
+    <!--List of Strings to be displayed on a ListView-->
+    <string-array name="items_list">
+        <item name="list_item_1">Item 1</item>
+        <item name="list_item_2">Item 2</item>
+        <item name="list_item_3">Item 3</item>
+        <item name="list_item_4">Item 4</item>
+        <item name="list_item_5">Item 5</item>
+        <item name="list_item_6">Item 6</item>
+        <item name="list_item_7">Item 7</item>
+        <item name="list_item_8">Item 8</item>
+        <item name="list_item_9">Item 9</item>
+    </string-array>
+
+    <!--List of Drawables to be displayed on a GridView-->
+    <array name="grid_list">
+        <item name="grid_item_1">@android:drawable/ic_menu_add</item>
+        <item name="grid_item_2">@android:drawable/ic_menu_agenda</item>
+        <item name="grid_item_3">@android:drawable/ic_menu_always_landscape_portrait</item>
+        <item name="grid_item_4">@android:drawable/ic_menu_call</item>
+        <item name="grid_item_5">@android:drawable/ic_menu_camera</item>
+        <item name="grid_item_6">@android:drawable/ic_menu_close_clear_cancel</item>
+        <item name="grid_item_7">@android:drawable/ic_menu_compass</item>
+        <item name="grid_item_8">@android:drawable/ic_menu_crop</item>
+        <item name="grid_item_9">@android:drawable/ic_menu_day</item>
+        <item name="grid_item_10">@android:drawable/ic_menu_delete</item>
+        <item name="grid_item_11">@android:drawable/ic_menu_directions</item>
+        <item name="grid_item_12">@android:drawable/ic_menu_edit</item>
+        <item name="grid_item_13">@android:drawable/ic_menu_gallery</item>
+        <item name="grid_item_14">@android:drawable/ic_menu_help</item>
+        <item name="grid_item_15">@android:drawable/ic_menu_info_details</item>
+        <item name="grid_item_16">@android:drawable/ic_menu_manage</item>
+    </array>
+</resources>

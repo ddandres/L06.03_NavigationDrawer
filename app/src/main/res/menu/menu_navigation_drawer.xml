@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright (c) 2016. David de Andrés and Juan Carlos Ruiz, DISCA - UPV, Development of apps for mobile devices.
+  -->
+<!--Actions to be displayed on the drawer-->
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/mLoginNavigation"
+        android:title="@string/title_login_fragment"
+        android:icon="@android:drawable/ic_menu_send"/>
+    <item
+        android:id="@+id/mSignInNavigation"
+        android:title="@string/title_signin_fragment"
+        android:icon="@android:drawable/ic_menu_edit"/>
+    <item
+        android:id="@+id/mListNavigation"
+        android:title="@string/title_list_fragment"
+        android:icon="@android:drawable/ic_menu_sort_by_size"/>
+    <item
+        android:id="@+id/mGridNavigation"
+        android:title="@string/title_grid_fragment"
+        android:icon="@android:drawable/ic_menu_gallery"/>
+</menu>

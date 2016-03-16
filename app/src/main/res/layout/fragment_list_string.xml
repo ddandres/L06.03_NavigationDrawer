@@ -1,0 +1,10 @@
+<!--
+  ~ Copyright (c) 2016. David de Andrés and Juan Carlos Ruiz, DISCA - UPV, Development of apps for mobile devices.
+  -->
+
+<ListView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/lvFragment"
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:layout_weight="1"
+    android:entries="@array/items_list" />

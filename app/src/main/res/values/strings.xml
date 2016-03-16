@@ -1,0 +1,35 @@
+<!--
+  ~ Copyright (c) 2016. David de Andrés and Juan Carlos Ruiz, DISCA - UPV, Development of apps for mobile devices.
+  -->
+
+<resources>
+    <string name="app_name">L06.03_NavigationDrawer</string>
+    <!--Strings related to the DashboardActivity-->
+    <string name="button_view_pager">Just a View Pager</string>
+    <string name="button_view_pager_title_strip">View Pager with Title Strip</string>
+    <string name="button_view_pager_tab_strip">View Pager with Tab Strip</string>
+    <string name="button_view_pager_tab_layout">View Pager with Tab Layout</string>
+    <!--Strings related to the Fragments-->
+    <string name="hint_user_name">User Name</string>
+    <string name="hint_password">Password</string>
+    <string name="button_login">Login</string>
+    <string name="hint_sign_in_user_name">Select a user name</string>
+    <string name="hint_sign_in_password">Select a password</string>
+    <string name="hint_sign_in_repeat_password">Repeat the password</string>
+    <string name="hint_sign_in_email">Introduce your email address</string>
+    <string name="button_sign_in">Sign in</string>
+    <!--Strings related to the menus-->
+    <string name="menu_fragment_login">Option Login</string>
+    <string name="menu_fragment_signin">Option Sign in</string>
+    <string name="menu_fragment_list">Option List</string>
+    <string name="menu_fragment_grid">Option Grid</string>
+    <!--Strings related to the ToolBar-->
+    <string name="title_login_fragment">Login</string>
+    <string name="title_signin_fragment">Sign In</string>
+    <string name="title_list_fragment">List String</string>
+    <string name="title_grid_fragment">Grid Image</string>
+    <string name="title_activity_main">MainActivity</string>
+    <!--Strings related to the NavigationDrawer-->
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+</resources>
