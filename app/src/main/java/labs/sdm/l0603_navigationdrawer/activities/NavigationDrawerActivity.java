@@ -13,7 +13,6 @@ import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
-import android.widget.Toast;
 
 import labs.sdm.l0603_navigationdrawer.R;
 import labs.sdm.l0603_navigationdrawer.fragments.GridImageFragment;

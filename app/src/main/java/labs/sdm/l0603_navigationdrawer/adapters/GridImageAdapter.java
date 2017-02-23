@@ -19,9 +19,9 @@ import labs.sdm.l0603_navigationdrawer.R;
 public class GridImageAdapter extends BaseAdapter {
 
     // Hold reference to the Context
-    Context context;
+    private Context context;
     // Array of Drawables obtained from a resource
-    TypedArray images;
+    private TypedArray images;
 
     /*
     * Gets the required Context and obtains the array of Drawables from a resource.
@@ -66,8 +66,7 @@ public class GridImageAdapter extends BaseAdapter {
         if (convertView == null) {
             // Get the existing ImageView to display the Drawable
             imageView = new ImageView(context);
-        }
-        else {
+        } else {
             // Create a new ImageView to display the Drawable
             imageView = (ImageView) convertView;
         }
