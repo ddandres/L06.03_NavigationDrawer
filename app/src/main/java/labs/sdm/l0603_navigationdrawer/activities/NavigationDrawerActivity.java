@@ -5,6 +5,7 @@
 package labs.sdm.l0603_navigationdrawer.activities;
 
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.GravityCompat;
@@ -38,14 +39,14 @@ public class NavigationDrawerActivity extends AppCompatActivity implements Navig
         setContentView(R.layout.activity_navigation_drawer);
 
         // Get a reference to the custom ToolBar
-        toolBar = (Toolbar) findViewById(R.id.toolBar);
+        toolBar = findViewById(R.id.toolBar);
         // Replace the default ActionBar (there should be none) by this ToolBar
         setSupportActionBar(toolBar);
         // Display the app's name on the ActionBar
         getSupportActionBar().setTitle(R.string.app_name);
 
         // Get a reference to the DrawerLayout (enables to pull a drawer from the screen's edge)
-        drawerLayout = (DrawerLayout) findViewById(R.id.drawerLayout);
+        drawerLayout = findViewById(R.id.drawerLayout);
         // Create a new ActionBarDrawerToggle, that links the drawer to the ToolBar
         // to implement the recommended design for navigation drawers
         toggle = new ActionBarDrawerToggle(this, drawerLayout, toolBar,
@@ -57,7 +58,7 @@ public class NavigationDrawerActivity extends AppCompatActivity implements Navig
         toggle.syncState();
 
         // Get a reference to the NavigationView in charge of displaying the options in the drawer
-        NavigationView navigationView = (NavigationView) findViewById(R.id.navView);
+        NavigationView navigationView = findViewById(R.id.navView);
         // Sets the listener to be notified when any element of the NavigationView is clicked
         navigationView.setNavigationItemSelectedListener(this);
 
@@ -88,7 +89,7 @@ public class NavigationDrawerActivity extends AppCompatActivity implements Navig
      * Change the title displayed in the Actionbar accordingly.
      */
     @Override
-    public boolean onNavigationItemSelected(MenuItem item) {
+    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
 
         Fragment fragment = null;
         String tag = null;
@@ -156,4 +157,5 @@ public class NavigationDrawerActivity extends AppCompatActivity implements Navig
 
         return true;
     }
+
 }
