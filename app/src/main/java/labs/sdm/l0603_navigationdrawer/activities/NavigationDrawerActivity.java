@@ -64,6 +64,18 @@ public class NavigationDrawerActivity extends AppCompatActivity implements Navig
 
         // Open the drawer when the activity starts
         drawerLayout.openDrawer(GravityCompat.START);
+
+        // If the activity is being created for the first time, then display the QuotationFragment,
+        // otherwise let the system recreate whatever was being displayed previously
+        if (savedInstanceState == null) {
+            getSupportFragmentManager()
+                    .beginTransaction()
+                    .replace(R.id.frameLayout, new LogInFragment())
+                    .commit();
+
+            ((NavigationView) findViewById(R.id.navView)).setCheckedItem(R.id.mLoginNavigation);
+        }
+
     }
 
     /**
@@ -151,6 +163,8 @@ public class NavigationDrawerActivity extends AppCompatActivity implements Navig
                 .beginTransaction()
                 .replace(R.id.frameLayout, fragment, tag)
                 .commit();
+
+        item.setChecked(true);
 
         // Close the drawer
         drawerLayout.closeDrawer(GravityCompat.START);

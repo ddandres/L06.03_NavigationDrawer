@@ -2,20 +2,22 @@
   ~ Copyright (c) 2016. David de Andrés and Juan Carlos Ruiz, DISCA - UPV, Development of apps for mobile devices.
   --><!--Actions to be displayed on the drawer-->
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
-    <item
-        android:id="@+id/mLoginNavigation"
-        android:icon="@android:drawable/ic_menu_send"
-        android:title="@string/title_login_fragment" />
-    <item
-        android:id="@+id/mSignInNavigation"
-        android:icon="@android:drawable/ic_menu_edit"
-        android:title="@string/title_signin_fragment" />
-    <item
-        android:id="@+id/mListNavigation"
-        android:icon="@android:drawable/ic_menu_sort_by_size"
-        android:title="@string/title_list_fragment" />
-    <item
-        android:id="@+id/mGridNavigation"
-        android:icon="@android:drawable/ic_menu_gallery"
-        android:title="@string/title_grid_fragment" />
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/mLoginNavigation"
+            android:icon="@android:drawable/ic_menu_send"
+            android:title="@string/title_login_fragment" />
+        <item
+            android:id="@+id/mSignInNavigation"
+            android:icon="@android:drawable/ic_menu_edit"
+            android:title="@string/title_signin_fragment" />
+        <item
+            android:id="@+id/mListNavigation"
+            android:icon="@android:drawable/ic_menu_sort_by_size"
+            android:title="@string/title_list_fragment" />
+        <item
+            android:id="@+id/mGridNavigation"
+            android:icon="@android:drawable/ic_menu_gallery"
+            android:title="@string/title_grid_fragment" />
+    </group>
 </menu>
