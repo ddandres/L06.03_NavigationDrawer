@@ -3,7 +3,7 @@
   -->
 
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="labs.sdm.l0603_navigationdrawer">
+    package="labs.dadm.l0603_navigationdrawer">
 
     <application
         android:allowBackup="true"

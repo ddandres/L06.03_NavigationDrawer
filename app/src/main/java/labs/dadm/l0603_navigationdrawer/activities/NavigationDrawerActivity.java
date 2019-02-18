@@ -2,7 +2,7 @@
  * Copyright (c) 2016. David de Andrés and Juan Carlos Ruiz, DISCA - UPV, Development of apps for mobile devices.
  */
 
-package labs.sdm.l0603_navigationdrawer.activities;
+package labs.dadm.l0603_navigationdrawer.activities;
 
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -15,11 +15,11 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 
-import labs.sdm.l0603_navigationdrawer.R;
-import labs.sdm.l0603_navigationdrawer.fragments.GridImageFragment;
-import labs.sdm.l0603_navigationdrawer.fragments.ListStringFragment;
-import labs.sdm.l0603_navigationdrawer.fragments.LogInFragment;
-import labs.sdm.l0603_navigationdrawer.fragments.SignInFragment;
+import labs.dadm.l0603_navigationdrawer.R;
+import labs.dadm.l0603_navigationdrawer.fragments.GridImageFragment;
+import labs.dadm.l0603_navigationdrawer.fragments.ListStringFragment;
+import labs.dadm.l0603_navigationdrawer.fragments.LogInFragment;
+import labs.dadm.l0603_navigationdrawer.fragments.SignInFragment;
 
 /**
  * Provides access to different Fragments by means of a NavigationDrawer.

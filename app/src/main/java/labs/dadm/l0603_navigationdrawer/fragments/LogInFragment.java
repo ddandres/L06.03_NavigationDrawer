@@ -2,7 +2,7 @@
  * Copyright (c) 2016. David de Andrés and Juan Carlos Ruiz, DISCA - UPV, Development of apps for mobile devices.
  */
 
-package labs.sdm.l0603_navigationdrawer.fragments;
+package labs.dadm.l0603_navigationdrawer.fragments;
 
 
 import android.os.Bundle;
@@ -16,7 +16,7 @@ import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import labs.sdm.l0603_navigationdrawer.R;
+import labs.dadm.l0603_navigationdrawer.R;
 
 /**
  * Displays an UI to let the user log in into a system. It includes no business logic, just for show.

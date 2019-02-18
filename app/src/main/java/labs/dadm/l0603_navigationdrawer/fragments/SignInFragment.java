@@ -2,7 +2,7 @@
  * Copyright (c) 2016. David de Andrés and Juan Carlos Ruiz, DISCA - UPV, Development of apps for mobile devices.
  */
 
-package labs.sdm.l0603_navigationdrawer.fragments;
+package labs.dadm.l0603_navigationdrawer.fragments;
 
 
 import android.os.Bundle;
@@ -16,19 +16,19 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
 
-import labs.sdm.l0603_navigationdrawer.R;
+import labs.dadm.l0603_navigationdrawer.R;
 
 /**
- * Displays a List of Strings.
+ * Displays an UI to let the user sign in into a system.
  * It includes no business logic, just for show.
  * It also adds actions to the ActionBar.
  */
-public class ListStringFragment extends Fragment {
+public class SignInFragment extends Fragment {
 
     /**
      * Required empty public constructor.
      */
-    public ListStringFragment() {
+    public SignInFragment() {
     }
 
     @Override
@@ -44,7 +44,7 @@ public class ListStringFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_list_string, null);
+        return inflater.inflate(R.layout.fragment_signin, container, false);
     }
 
     /**
@@ -52,7 +52,7 @@ public class ListStringFragment extends Fragment {
      */
     @Override
     public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
-        inflater.inflate(R.menu.menu_list, menu);
+        inflater.inflate(R.menu.menu_signin, menu);
     }
 
     /**
@@ -61,14 +61,13 @@ public class ListStringFragment extends Fragment {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         // Determine the action to take place according to the Id of the action selected
-        if (item.getItemId() == R.id.mList) {
+        if (item.getItemId() == R.id.mSignin) {
             // Notify the user that this action has been selected
-            Toast.makeText(getContext(), R.string.menu_fragment_list, Toast.LENGTH_SHORT).show();
+            Toast.makeText(getContext(), R.string.menu_fragment_signin, Toast.LENGTH_SHORT).show();
             return true;
         }
         // There was no custom behaviour for that action, so let the system take care of it
         return super.onOptionsItemSelected(item);
     }
-
 
 }

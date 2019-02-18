@@ -2,7 +2,7 @@
  * Copyright (c) 2016. David de Andrés and Juan Carlos Ruiz, DISCA - UPV, Development of apps for mobile devices.
  */
 
-package labs.sdm.l0603_navigationdrawer.fragments;
+package labs.dadm.l0603_navigationdrawer.fragments;
 
 
 import android.os.Bundle;
@@ -14,26 +14,21 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.GridView;
 import android.widget.Toast;
 
-import labs.sdm.l0603_navigationdrawer.R;
-import labs.sdm.l0603_navigationdrawer.adapters.GridImageAdapter;
+import labs.dadm.l0603_navigationdrawer.R;
 
 /**
- * Displays a List of Drawables in Grid form.
+ * Displays a List of Strings.
  * It includes no business logic, just for show.
  * It also adds actions to the ActionBar.
  */
-public class GridImageFragment extends Fragment {
-
-    // Hold reference to the custom grid adapter
-    GridImageAdapter adapter;
+public class ListStringFragment extends Fragment {
 
     /**
      * Required empty public constructor.
      */
-    public GridImageFragment() {
+    public ListStringFragment() {
     }
 
     @Override
@@ -49,25 +44,7 @@ public class GridImageFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Get a reference to the GridView in charge of displaying the List of Drawables
-        GridView grid = (GridView) inflater.inflate(R.layout.fragment_grid_images, null);
-        // Create an instance of the custom grid adapter
-        adapter = new GridImageAdapter(getContext());
-        // Associate the adapter to the GridView
-        grid.setAdapter(adapter);
-
-        return grid;
-    }
-
-    /**
-     * This method is called whenever the Fragment has been dettached from the activity,
-     * so it will be newly created.
-     */
-    @Override
-    public void onDestroyView() {
-        super.onDestroyView();
-        // Recycle the TypedArray used in the custom grid adapter to keep the List of Drawables
-        adapter.recycle();
+        return inflater.inflate(R.layout.fragment_list_string, null);
     }
 
     /**
@@ -75,7 +52,7 @@ public class GridImageFragment extends Fragment {
      */
     @Override
     public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
-        inflater.inflate(R.menu.menu_grid, menu);
+        inflater.inflate(R.menu.menu_list, menu);
     }
 
     /**
@@ -84,13 +61,14 @@ public class GridImageFragment extends Fragment {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         // Determine the action to take place according to the Id of the action selected
-        if (item.getItemId() == R.id.mGrid) {
+        if (item.getItemId() == R.id.mList) {
             // Notify the user that this action has been selected
-            Toast.makeText(getContext(), R.string.menu_fragment_grid, Toast.LENGTH_SHORT).show();
+            Toast.makeText(getContext(), R.string.menu_fragment_list, Toast.LENGTH_SHORT).show();
             return true;
         }
         // There was no custom behaviour for that action, so let the system take care of it
         return super.onOptionsItemSelected(item);
     }
+
 
 }
