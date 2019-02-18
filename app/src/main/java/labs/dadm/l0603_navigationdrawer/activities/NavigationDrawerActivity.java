@@ -42,20 +42,15 @@ public class NavigationDrawerActivity extends AppCompatActivity implements Navig
         toolBar = findViewById(R.id.toolBar);
         // Replace the default ActionBar (there should be none) by this ToolBar
         setSupportActionBar(toolBar);
+        // Show the user that selecting home will return one level up rather than to the top level
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        // Set drawable to be used when DISPLAY_HOME_AS_UP is enabled (hamburguer in this case)
+        getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_menu);
         // Display the app's name on the ActionBar
         getSupportActionBar().setTitle(R.string.app_name);
 
         // Get a reference to the DrawerLayout (enables to pull a drawer from the screen's edge)
         drawerLayout = findViewById(R.id.drawerLayout);
-        // Create a new ActionBarDrawerToggle, that links the drawer to the ToolBar
-        // to implement the recommended design for navigation drawers
-        toggle = new ActionBarDrawerToggle(this, drawerLayout, toolBar,
-                R.string.navigation_drawer_open, R.string.navigation_drawer_close);
-        // Associate the ActionBarDrawerToggle to the drawer, so any change in the state
-        // of the drawer will be notified to the Toolbar to react accordingly
-        drawerLayout.addDrawerListener(toggle);
-        // Synchronize the state of the ToolBar with that of the DrawerLayout
-        toggle.syncState();
 
         // Get a reference to the NavigationView in charge of displaying the options in the drawer
         NavigationView navigationView = findViewById(R.id.navView);
@@ -76,6 +71,20 @@ public class NavigationDrawerActivity extends AppCompatActivity implements Navig
             ((NavigationView) findViewById(R.id.navView)).setCheckedItem(R.id.mLoginNavigation);
         }
 
+    }
+
+    /**
+     * This method is executed when any action from the ActionBar is selected.
+     */
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            // Open the drawer when the home (hamburguer) icon is clicked
+            case android.R.id.home:
+                drawerLayout.openDrawer(GravityCompat.START);
+                return true;
+        }
+        return super.onOptionsItemSelected(item);
     }
 
     /**
