@@ -5,15 +5,16 @@
 package labs.dadm.l0603_navigationdrawer.activities;
 
 import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.design.widget.NavigationView;
-import android.support.v4.app.Fragment;
-import android.support.v4.view.GravityCompat;
-import android.support.v4.widget.DrawerLayout;
-import android.support.v7.app.ActionBarDrawerToggle;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+import androidx.core.view.GravityCompat;
+import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.fragment.app.Fragment;
+
+import com.google.android.material.navigation.NavigationView;
 
 import labs.dadm.l0603_navigationdrawer.R;
 import labs.dadm.l0603_navigationdrawer.fragments.GridImageFragment;
@@ -28,10 +29,9 @@ import labs.dadm.l0603_navigationdrawer.fragments.SignInFragment;
  */
 public class NavigationDrawerActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
-    // Hold references to the ToolBar, DrawerLayout, and ActionBarDrawerToggle
+    // Hold references to the ToolBar and DrawerLayout
     Toolbar toolBar;
     DrawerLayout drawerLayout;
-    ActionBarDrawerToggle toggle;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -78,11 +78,10 @@ public class NavigationDrawerActivity extends AppCompatActivity implements Navig
      */
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()) {
+        if (item.getItemId() == android.R.id.home) {
             // Open the drawer when the home (hamburguer) icon is clicked
-            case android.R.id.home:
-                drawerLayout.openDrawer(GravityCompat.START);
-                return true;
+            drawerLayout.openDrawer(GravityCompat.START);
+            return true;
         }
         return super.onOptionsItemSelected(item);
     }
