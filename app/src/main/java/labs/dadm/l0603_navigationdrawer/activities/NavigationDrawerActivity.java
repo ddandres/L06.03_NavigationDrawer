@@ -115,55 +115,51 @@ public class NavigationDrawerActivity extends AppCompatActivity implements Navig
         String tag = null;
 
         // Determine the action to take place according to the Id of the action selected
-        switch (item.getItemId()) {
-
+        final int selectedItem = item.getItemId();
+        if (selectedItem == R.id.mLoginNavigation) {
             // Display LogInFragment
-            case R.id.mLoginNavigation:
-                // Get or create a new LogInFragment
-                tag = "login";
-                fragment = getSupportFragmentManager().findFragmentByTag(tag);
-                if (fragment == null) {
-                    fragment = LogInFragment.newInstance("David");
-                }
-                // Display the LogInFragment title on the ActionBar
-                toolBar.setTitle(R.string.title_login_fragment);
-                break;
 
+            // Get or create a new LogInFragment
+            tag = "login";
+            fragment = getSupportFragmentManager().findFragmentByTag(tag);
+            if (fragment == null) {
+                fragment = LogInFragment.newInstance("David");
+            }
+            // Display the LogInFragment title on the ActionBar
+            toolBar.setTitle(R.string.title_login_fragment);
+        } else if (selectedItem == R.id.mSignInNavigation) {
             // Display SignInFragment
-            case R.id.mSignInNavigation:
-                // Get or create a new SignInFragment
-                tag = "signin";
-                fragment = getSupportFragmentManager().findFragmentByTag(tag);
-                if (fragment == null) {
-                    fragment = new SignInFragment();
-                }
-                // Display the SignInFragment title on the ActionBar
-                toolBar.setTitle(R.string.title_signin_fragment);
-                break;
 
+            // Get or create a new SignInFragment
+            tag = "signin";
+            fragment = getSupportFragmentManager().findFragmentByTag(tag);
+            if (fragment == null) {
+                fragment = new SignInFragment();
+            }
+            // Display the SignInFragment title on the ActionBar
+            toolBar.setTitle(R.string.title_signin_fragment);
+        } else if (selectedItem == R.id.mListNavigation) {
             // Display ListStringFragment
-            case R.id.mListNavigation:
-                // Get or create a new ListStringFragment
-                tag = "list";
-                fragment = getSupportFragmentManager().findFragmentByTag(tag);
-                if (fragment == null) {
-                    fragment = new ListStringFragment();
-                }
-                // Display the ListStringFragment title on the ActionBar
-                toolBar.setTitle(R.string.title_list_fragment);
-                break;
 
+            // Get or create a new ListStringFragment
+            tag = "list";
+            fragment = getSupportFragmentManager().findFragmentByTag(tag);
+            if (fragment == null) {
+                fragment = new ListStringFragment();
+            }
+            // Display the ListStringFragment title on the ActionBar
+            toolBar.setTitle(R.string.title_list_fragment);
+        } else if (selectedItem == R.id.mGridNavigation) {
             // Display GridViewFragment
-            case R.id.mGridNavigation:
-                // Get or create a new GridViewFragment
-                tag = "grid";
-                fragment = getSupportFragmentManager().findFragmentByTag(tag);
-                if (fragment == null) {
-                    fragment = new GridImageFragment();
-                }
-                // Display the GridViewFragment title on the ActionBar
-                toolBar.setTitle(R.string.title_grid_fragment);
-                break;
+
+            // Get or create a new GridViewFragment
+            tag = "grid";
+            fragment = getSupportFragmentManager().findFragmentByTag(tag);
+            if (fragment == null) {
+                fragment = new GridImageFragment();
+            }
+            // Display the GridViewFragment title on the ActionBar
+            toolBar.setTitle(R.string.title_grid_fragment);
         }
 
         // Replace the existing Fragment by the new one
