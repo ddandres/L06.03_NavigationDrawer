@@ -32,8 +32,8 @@
             app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
 
         <!--Container that will display the rest of elements on the screen-->
-        <FrameLayout
-            android:id="@+id/frameLayout"
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/fcvLayout"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:paddingLeft="@dimen/activity_horizontal_margin"

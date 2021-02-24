@@ -6,9 +6,6 @@ package labs.dadm.l0603_navigationdrawer.fragments;
 
 
 import android.os.Bundle;
-
-import androidx.annotation.NonNull;
-import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -17,6 +14,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.Toast;
+
+import androidx.annotation.NonNull;
+import androidx.fragment.app.Fragment;
 
 import labs.dadm.l0603_navigationdrawer.R;
 
@@ -28,43 +28,15 @@ import labs.dadm.l0603_navigationdrawer.R;
  */
 public class LogInFragment extends Fragment {
 
-    // Key to be used for the user name in this Fragment's arguments
-    private static final String USERNAME = "username";
-
-    private String userName;
-
     /**
      * Required empty public constructor.
      */
     public LogInFragment() {
     }
 
-    /**
-     * Creates a new instance of this Fragment using the provided user name.
-     */
-    public static LogInFragment newInstance(String userName) {
-
-        // Create a new instance of the Fragment
-        LogInFragment fragment = new LogInFragment();
-        // Create a Bundle to keep all the provided parameters
-        Bundle args = new Bundle();
-        // Put the parameters within the Bundle
-        args.putString(USERNAME, userName);
-        // Set the Bundle as arguments of this Fragment
-        fragment.setArguments(args);
-
-        return fragment;
-    }
-
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-        // Retrieve any parameters available withinh the Fragment's arguments
-        if (getArguments() != null) {
-            // Get the user name
-            userName = getArguments().getString(USERNAME);
-        }
 
         // The Fragment can now add actions to the ActionBar and react when they are clicked
         setHasOptionsMenu(true);
@@ -78,13 +50,13 @@ public class LogInFragment extends Fragment {
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_login, container, false);
         // Update the user name according to the obtained argument
-        EditText etUser = view.findViewById(R.id.etUserName);
-        etUser.setText(userName);
+        final EditText etUser = view.findViewById(R.id.etUserName);
+        etUser.setText(requireArguments().getString("username"));
         return view;
     }
 
     /**
-     * This method is executed when the fragment is created to populate the ActionBar with actions.
+     * This method is executed when the activity is created to populate the ActionBar with actions.
      */
     @Override
     public void onCreateOptionsMenu(@NonNull Menu menu, MenuInflater inflater) {

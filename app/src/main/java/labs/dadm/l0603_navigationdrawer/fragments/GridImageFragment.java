@@ -6,10 +6,6 @@ package labs.dadm.l0603_navigationdrawer.fragments;
 
 
 import android.os.Bundle;
-
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -18,6 +14,10 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.GridView;
 import android.widget.Toast;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.fragment.app.Fragment;
 
 import labs.dadm.l0603_navigationdrawer.R;
 import labs.dadm.l0603_navigationdrawer.adapters.GridImageAdapter;
@@ -54,7 +54,7 @@ public class GridImageFragment extends Fragment {
         // Get a reference to the GridView in charge of displaying the List of Drawables
         GridView grid = (GridView) inflater.inflate(R.layout.fragment_grid_images, container, false);
         // Create an instance of the custom grid adapter
-        adapter = new GridImageAdapter(getContext());
+        adapter = new GridImageAdapter(requireContext());
         // Associate the adapter to the GridView
         grid.setAdapter(adapter);
 
