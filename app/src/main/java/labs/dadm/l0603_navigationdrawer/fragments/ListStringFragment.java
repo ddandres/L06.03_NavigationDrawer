@@ -6,10 +6,6 @@ package labs.dadm.l0603_navigationdrawer.fragments;
 
 
 import android.os.Bundle;
-
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -18,18 +14,18 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.fragment.app.Fragment;
+
 import labs.dadm.l0603_navigationdrawer.R;
 
-/**
- * Displays a List of Strings.
- * It includes no business logic, just for show.
- * It also adds actions to the ActionBar.
- */
+// Displays a List of Strings.
+// It includes no business logic, just for show.
+// It also adds actions to the ActionBar.
 public class ListStringFragment extends Fragment {
 
-    /**
-     * Required empty public constructor.
-     */
+    // Required empty public constructor.
     public ListStringFragment() {
     }
 
@@ -40,26 +36,20 @@ public class ListStringFragment extends Fragment {
         setHasOptionsMenu(true);
     }
 
-    /**
-     * Creates the View associated to this Fragment from a Layout resource.
-     */
+    // Creates the View associated to this Fragment from a Layout resource.
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         return inflater.inflate(R.layout.fragment_list_string, container, false);
     }
 
-    /**
-     * This method is executed when the activity is created to populate the ActionBar with actions.
-     */
+    // This method is executed when the activity is created to populate the ActionBar with actions.
     @Override
     public void onCreateOptionsMenu(@NonNull Menu menu, MenuInflater inflater) {
         inflater.inflate(R.menu.menu_list, menu);
     }
 
-    /**
-     * This method is executed when any action from the ActionBar is selected.
-     */
+    // This method is executed when any action from the ActionBar is selected.
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         // Determine the action to take place according to the Id of the action selected
@@ -71,6 +61,4 @@ public class ListStringFragment extends Fragment {
         // There was no custom behaviour for that action, so let the system take care of it
         return super.onOptionsItemSelected(item);
     }
-
-
 }

@@ -22,19 +22,15 @@ import androidx.fragment.app.Fragment;
 import labs.dadm.l0603_navigationdrawer.R;
 import labs.dadm.l0603_navigationdrawer.adapters.GridImageAdapter;
 
-/**
- * Displays a List of Drawables in Grid form.
- * It includes no business logic, just for show.
- * It also adds actions to the ActionBar.
- */
+// Displays a List of Drawables in Grid form.
+// It includes no business logic, just for show.
+// It also adds actions to the ActionBar.
 public class GridImageFragment extends Fragment {
 
     // Hold reference to the custom grid adapter
     private GridImageAdapter adapter;
 
-    /**
-     * Required empty public constructor.
-     */
+    // Required empty public constructor.
     public GridImageFragment() {
     }
 
@@ -45,9 +41,7 @@ public class GridImageFragment extends Fragment {
         setHasOptionsMenu(true);
     }
 
-    /**
-     * Creates the View associated to this Fragment from a Layout resource.
-     */
+    // Creates the View associated to this Fragment from a Layout resource.
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -61,10 +55,8 @@ public class GridImageFragment extends Fragment {
         return grid;
     }
 
-    /**
-     * This method is called whenever the Fragment has been dettached from the activity,
-     * so it will be newly created.
-     */
+    // This method is called whenever the Fragment has been dettached from the activity,
+    // so it will be newly created.
     @Override
     public void onDestroyView() {
         super.onDestroyView();
@@ -72,17 +64,13 @@ public class GridImageFragment extends Fragment {
         adapter.recycle();
     }
 
-    /**
-     * This method is executed when the activity is created to populate the ActionBar with actions.
-     */
+    // This method is executed when the activity is created to populate the ActionBar with actions.
     @Override
     public void onCreateOptionsMenu(@NonNull Menu menu, MenuInflater inflater) {
         inflater.inflate(R.menu.menu_grid, menu);
     }
 
-    /**
-     * This method is executed when any action from the ActionBar is selected.
-     */
+    // This method is executed when any action from the ActionBar is selected.
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         // Determine the action to take place according to the Id of the action selected
@@ -94,5 +82,4 @@ public class GridImageFragment extends Fragment {
         // There was no custom behaviour for that action, so let the system take care of it
         return super.onOptionsItemSelected(item);
     }
-
 }
